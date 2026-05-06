@@ -1,0 +1,292 @@
+/* ========================================
+   MINIMALIST BIPADOR (PRODUCTION CONTROL)
+   ======================================== */
+
+:root {
+    --dark-bg: #363636;
+    --dark-card: #454545;
+    --dark-border: #5a5a5a;
+    --primary-accent: #ff6600;
+    --light-text: #FFFFFF;
+    --secondary-text: #cccccc;
+    --input-bg: #3c3c3c;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #2d2d2d 0%, #3d3d3d 100%);
+    color: var(--light-text);
+}
+
+.bg-dark-bg {
+    background-color: var(--dark-bg);
+}
+
+.bg-dark-card {
+    background-color: var(--dark-card);
+}
+
+.text-light-text {
+    color: var(--light-text);
+}
+
+.text-secondary-text {
+    color: var(--secondary-text);
+}
+
+.text-primary-accent {
+    color: var(--primary-accent);
+}
+
+.border-dark-border {
+    border-color: var(--dark-border);
+}
+
+.bg-primary-accent {
+    background-color: var(--primary-accent);
+}
+
+/* Main Card Container */
+.w-full.max-w-md {
+    max-width: 500px;
+}
+
+.bg-dark-card.shadow-2xl {
+    background-color: var(--dark-card);
+    border: 1px solid var(--dark-border);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+/* Title */
+.text-3xl.font-extrabold.text-primary-accent {
+    font-size: 1.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Step Buttons */
+.btn-etapa {
+    background-color: var(--input-bg);
+    border: 2px solid var(--dark-border);
+    color: var(--light-text);
+    transition: all 0.2s ease;
+    border-radius: 8px;
+    padding: 1.25rem;
+    font-weight: 500;
+}
+
+.btn-etapa:hover {
+    border-color: var(--primary-accent);
+    background-color: rgba(255, 102, 0, 0.1);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.btn-etapa.selected {
+    background-color: var(--primary-accent);
+    border-color: var(--primary-accent);
+    color: white;
+    font-weight: 600;
+    box-shadow: 0 4px 16px rgba(255, 102, 0, 0.3);
+}
+
+/* Timer Buttons */
+.btn-green {
+    background-color: #10b981;
+    border: none;
+    transition: all 0.2s ease;
+}
+
+.btn-green:hover:not(:disabled) {
+    background-color: #059669;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+}
+
+.btn-yellow {
+    background-color: #f59e0b;
+    border: none;
+    transition: all 0.2s ease;
+}
+
+.btn-yellow:hover:not(:disabled) {
+    background-color: #d97706;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3);
+}
+
+.btn-red {
+    background-color: #ef4444;
+    border: none;
+    transition: all 0.2s ease;
+}
+
+.btn-red:hover:not(:disabled) {
+    background-color: #dc2626;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);
+}
+
+/* Input Styling */
+.focus-accent:focus {
+    border-color: var(--primary-accent);
+    box-shadow: 0 0 0 3px rgba(255, 102, 0, 0.15);
+    outline: none;
+}
+
+.styled-select {
+    background-color: var(--input-bg);
+    color: var(--light-text);
+    border: 2px solid var(--dark-border);
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    font-size: 0.9375rem;
+    width: 100%;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%23cccccc" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+}
+
+.styled-select:hover {
+    border-color: var(--primary-accent);
+}
+
+.styled-select:focus {
+    outline: none;
+    border-color: var(--primary-accent);
+    box-shadow: 0 0 0 3px rgba(255, 102, 0, 0.15);
+}
+
+.styled-select option[disabled] {
+    color: var(--secondary-text);
+}
+
+/* Timer Display */
+#timer-section {
+    background-color: rgba(0, 0, 0, 0.2);
+    border: 1px solid var(--dark-border);
+    border-radius: 8px;
+}
+
+#timer-display {
+    font-family: 'Courier New', monospace;
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--light-text);
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+#timer-status {
+    font-size: 0.875rem;
+    color: var(--secondary-text);
+    font-weight: 500;
+}
+
+/* BIP Input */
+#codigo-input {
+    background-color: var(--input-bg);
+    border: 3px solid var(--dark-border);
+    color: var(--light-text);
+    font-size: 1.5rem;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    transition: all 0.2s ease;
+}
+
+#codigo-input:focus {
+    border-color: var(--primary-accent);
+    box-shadow: 0 0 0 4px rgba(255, 102, 0, 0.15);
+}
+
+#codigo-input::placeholder {
+    color: #666;
+}
+
+/* Log List */
+#log-list {
+    background-color: rgba(0, 0, 0, 0.3);
+    border: 1px solid var(--dark-border);
+    border-radius: 8px;
+    max-height: 200px;
+    overflow-y: auto;
+    padding: 0.75rem;
+}
+
+#log-list li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+#log-list li:last-child {
+    border-bottom: none;
+}
+
+/* Scrollbar */
+#log-list::-webkit-scrollbar {
+    width: 6px;
+}
+
+#log-list::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+}
+
+#log-list::-webkit-scrollbar-thumb {
+    background: var(--dark-border);
+    border-radius: 3px;
+}
+
+#log-list::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-accent);
+}
+
+/* Current Etapa Display */
+#current-etapa-display {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--primary-accent);
+}
+
+/* Confirmation Button */
+#confirm-step-btn {
+    background-color: var(--primary-accent);
+    color: white;
+    font-weight: 600;
+    padding: 0.875rem;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 12px rgba(255, 102, 0, 0.2);
+}
+
+#confirm-step-btn:hover:not(:disabled) {
+    background-color: #e65c00;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(255, 102, 0, 0.3);
+}
+
+#confirm-step-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Button States */
+button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* User Display */
+#user-display {
+    background-color: var(--input-bg);
+    border: 1px solid var(--dark-border);
+    padding: 0.75rem;
+    border-radius: 6px;
+    color: var(--light-text);
+    font-family: monospace;
+    font-size: 0.875rem;
+}
